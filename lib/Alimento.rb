@@ -14,5 +14,9 @@ module Alimento
 		def to_s
 			"#{@nombre}: #{@proteinas}g de proteínas, #{@glucidos}g de glúcidos y #{@lipidos}g de lípidos"
 		end
+
+		def valor_energetico 
+			@proteinas*4 + @glucidos*4 + @lipidos*6
+		end
 	end
 end

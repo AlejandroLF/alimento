@@ -34,8 +34,8 @@ RSpec.describe Alimento do
   end
 
   it "tiene un método para obtener el valor energético de un alimento" do
-    expect(@lechevaca.valor_energetico).to eq(55.2)
-    expect(@aceite.valor_energetico).to eq(598.4)
+    expect((@lechevaca.valor_energetico-51.6).abs).to be < 0.001
+    expect((@aceite.valor_energetico-598.4).abs).to be < 0.001
   end
  
 end
