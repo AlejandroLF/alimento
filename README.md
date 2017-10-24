@@ -3,5 +3,4 @@
 
 ## Alimento
 
-Clase en Ruby que describe un alimento en función de sus macronutrientes. Permite obtener las cantidades de proteínas, glúcidos y lípidos en gramos, además del nombre del alimento. También es posible conocer su valor energético.
-
+Clase en Ruby que describe un alimento en función de sus macronutrientes. Permite obtener las cantidades de proteínas, glúcidos y lípidos en gramos, además del nombre del alimento, tanto por separado como de forma formateada. También es posible conocer su valor energético.
