@@ -2,7 +2,7 @@ require "Alimento/version"
 
 module Alimento
   	class Alimento
-		attr_accessor :nombre
+		attr_accessor :nombre, :proteinas, :glucidos, :lipidos
 
 		def initialize(nombre, proteinas, glucidos, lipidos)
 			@nombre = nombre
