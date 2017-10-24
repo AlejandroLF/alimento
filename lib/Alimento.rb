@@ -10,5 +10,9 @@ module Alimento
 			@glucidos = glucidos
 			@lipidos = lipidos
 		end
+
+		def to_s
+			"#{@nombre}: #{@proteinas}g de proteínas, #{@glucidos}g de glúcidos y #{@lipidos}g de lípidos"
+		end
 	end
 end
