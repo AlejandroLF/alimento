@@ -13,4 +13,20 @@ RSpec.describe Alimento do
     expect(Alimento::VERSION).not_to be nil
   end
 
+  it "tiene un metodo para obtener el nombre del alimento" do
+    expect(@huevofrito.nombre).to eq('Huevo frito')
+  end
+
+  it "tiene un metodo para obtener la cantidad de proteninas" do
+    expect(@lechevaca.proteinas).to eq(3.3)
+  end
+
+  it "tiene un metodo para obtener la cantidad de glucidos" do
+    expect(@yogurt.glucidos).to eq(4.9)
+  end
+
+  it "tiene un metodo para obtener la cantidad de lipidos" do
+    expect(@aceite.lipidos).to eq(99.6)
+  end
+ 
 end
