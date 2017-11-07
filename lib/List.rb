@@ -13,6 +13,8 @@ class List
 		@head = Node.new(value, @head, nil)
 		if(@tail == nil)
 			@tail = @head
+		else
+			@head.next.prev = @head
 		end
 	end
 	
@@ -20,6 +22,26 @@ class List
 		@tail = Node.new(value, nil, @tail)
 		if(@head == nil)
 			@head = @tail
+		else
+			@tail.prev.next = @tail
+		end
+	end
+	
+	def pop_front
+		if(@tail == @head)
+			@tail = @head = nil
+		else
+			@head = @head.next
+			@head.prev = nil
+		end
+	end
+	
+	def pop_back
+		if(@tail == @head)
+			@tail = @head = nil
+		else
+			@tail = @tail.prev
+			@tail.next = nil
 		end
 	end
 end
