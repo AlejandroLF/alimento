@@ -13,5 +13,13 @@ RSpec.describe List do
 		@l.head
 		@l.tail
 	end
+	
+	it "se puede insertar un elemento por delante" do
+		@l.push_front(33)
+	end
+	
+	it "se puede insertar un elemento por detrás" do
+		@l.push_back('hola')
+	end
 
 end
