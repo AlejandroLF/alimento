@@ -8,7 +8,7 @@ RSpec.describe List do
 		@l.push_back('tres')
 	end
 
-	it "tiene un punto con datos, siguiente y previo" do
+	it "tiene un nodo con datos, siguiente y previo" do
 		Node.new(3, nil, nil);
 	end
 	
@@ -42,5 +42,15 @@ RSpec.describe List do
 	it "se puede borrar un elemento por detrás" do
 		@l.pop_back
 		expect(@l.tail.prev.value).to eq(1)
+	end
+	
+	it "se puede insertar un elemento antes de cualquier posición" do
+		@l.insert(@l.tail, 'antes de tail')
+		expect(@l.tail.prev.value).to eq('antes de tail')
+	end
+	
+	it "se puede borrar un elemento cualquiera" do
+		@l.erase(@l.head.next)
+		expect(@l.head.next.value).to eq('tres')
 	end
 end
