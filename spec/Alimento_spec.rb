@@ -37,6 +37,11 @@ RSpec.describe Alimento do
 		expect((@lechevaca.valor_energetico-51.6).abs).to be < 0.001
 		expect((@aceite.valor_energetico-598.4).abs).to be < 0.001
 	end
+	
+	it "es comparable" do
+		expect(@lechevaca = @aceite).to eq(false)
+		expect(@lechevaca < @aceite).to eq(true)
+	end
 end
 
 
