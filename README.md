@@ -1,4 +1,4 @@
-# Práctica de Laboratorio #6. Desarrollo Dirigido por Pruebas (TDD).
+# Práctica de Laboratorio #8. POO. Módulos. INDIVIDUAL. PUNTUABLE.
 - Por Alejandro León Fernández
 
 ## Alimento

@@ -1,14 +1,22 @@
 require 'Alimento/Node.rb'
 
+#
+# Clase en Ruby que implementa una lista doblemente enlazada.
+# Permite insertar o borrar elementos en cualquier lugar de la misma.
+#
+# Author::	Alejandro León Fernández  (alu0100973792@ull.edu.es)
+#
 class List
 	include Enumerable
 	attr_reader :head, :tail
 	
+	# Inicializa la cabeza y la cola de la lista vacía
 	def initialize
 		@head = nil
 		@tail = nil
 	end
 	
+	# Inserta un nodo con el valor value por delante
 	def push_front (value)
 		@head = Node.new(value, @head, nil)
 		if(@tail == nil)
@@ -18,6 +26,7 @@ class List
 		end
 	end
 	
+	# Inserta un nodo con el valor value por detrás
 	def push_back (value)
 		@tail = Node.new(value, nil, @tail)
 		if(@head == nil)
@@ -27,6 +36,7 @@ class List
 		end
 	end
 	
+	# Borra el primer nodo
 	def pop_front
 		if(@tail == @head)
 			@tail = @head = nil
@@ -36,6 +46,7 @@ class List
 		end
 	end
 	
+	# Borra el último nodo
 	def pop_back
 		if(@tail == @head)
 			@tail = @head = nil
@@ -45,6 +56,7 @@ class List
 		end
 	end
 	
+	# Inserta un nodo con el valor value por delante del nodo position
 	def insert (position, value)
 		if(position.instance_of? Node)
 			found = false
@@ -63,6 +75,7 @@ class List
 		end
 	end
 	
+	# Borra el nodo position
 	def erase (position)
 		if(position.instance_of? Node)
 			aux = @head
@@ -87,6 +100,7 @@ class List
 		end
 	end
 	
+	# Le da el control al bloque recibido para el valor de cada nodo
 	def each
 		aux = @head
 		while aux != nil
