@@ -39,7 +39,7 @@ RSpec.describe Alimento do
 	end
 	
 	it "es comparable" do
-		expect(@lechevaca = @aceite).to eq(false)
+		expect(@lechevaca == @aceite).to eq(false)
 		expect(@lechevaca < @aceite).to eq(true)
 	end
 end
