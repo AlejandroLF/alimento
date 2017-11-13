@@ -1,7 +1,7 @@
 require "bundler/setup"
 require "Alimento"
-require "List"
-require "TiposAlimento"
+require "Alimento/List"
+require "Alimento/TiposAlimento"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

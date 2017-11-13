@@ -1,4 +1,4 @@
-require 'Node.rb'
+require 'Alimento/Node.rb'
 
 class List
 	attr_reader :head, :tail
