@@ -1,6 +1,7 @@
 require 'Alimento/Node.rb'
 
 class List
+	include Enumerable
 	attr_reader :head, :tail
 	
 	def initialize
@@ -85,6 +86,13 @@ class List
 			end
 		end
 	end
-
+	
+	def each
+		aux = @head
+		while aux != nil
+			yield aux.value
+			aux = aux.next
+		end
+	end
 end
 

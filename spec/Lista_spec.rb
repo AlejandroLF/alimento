@@ -53,4 +53,10 @@ RSpec.describe List do
 		@l.erase(@l.head.next)
 		expect(@l.head.next.value).to eq('tres')
 	end
+	
+	it "es enumerable" do
+		@l.each{|e| puts e}
+		expect(@l.any?{|e| e == 3}).to eq(false)
+		expect(@l.any?{|e| e == 'tres'}).to eq(true)
+	end
 end
