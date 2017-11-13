@@ -55,7 +55,7 @@ RSpec.describe List do
 	end
 	
 	it "es enumerable" do
-		@l.each{|e| puts e}
+		@l.reverse_each{|e| puts e}
 		expect(@l.any?{|e| e == 3}).to eq(false)
 		expect(@l.any?{|e| e == 'tres'}).to eq(true)
 	end
