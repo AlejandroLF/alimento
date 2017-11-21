@@ -35,5 +35,18 @@ module Alimento
 		def <=>(other)
 			valor_energetico <=> other.valor_energetico
 		end
+		
+		def aibc (mediciones)
+			base = mediciones[0]
+			posteriores = mediciones[1..mediciones.size-1]
+			posteriores.zip(mediciones).reject{ |i| i[0] < base}.map{ |i| i[0]+i[1]-2*base}.map{ |i| i * 2.5}.reduce(:+)
+		end
+		
+		def indice_glucemico (datos_alimento, datos_glucosa)
+			aibcs_alimento = datos_alimento.map { |i| aibc(i)}
+			aibcs_glucosa = datos_glucosa.map { |i| aibc(i)}
+			suma = aibcs_alimento.zip(aibcs_glucosa).map{ |i| i[0]/i[1]*100}.reduce(:+)
+			suma / datos_alimento.count
+		end
 	end
 end
