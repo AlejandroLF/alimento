@@ -54,11 +54,11 @@ RSpec.describe Alimento do
 	
 	it "tiene un método para calcular el Índice Glucémico" do
 		# compota de manzana = 50.9?
-		expect(abs(Alimento.new("Compota de manzana", 1, 1, 1).indice_glucemico(@datos_compota, @datos_glucosa) - 50.9)).to be < 10
+		expect(abs(Alimento::Alimento.new("Compota de manzana", 1, 1, 1).indice_glucemico(@datos_compota, @datos_glucosa) - 50.9)).to be < 10
 		# yogurt = 47.3?
-		expect(abs(Alimento.new("Yogurt", 1, 1, 1).indice_glucemico(@datos_yogurt, @datos_glucosa) - 47.3)).to be < 10
+		expect(abs(Alimento::Alimento.new("Yogurt", 1, 1, 1).indice_glucemico(@datos_yogurt, @datos_glucosa) - 47.3)).to be < 10
 		# chocolate = 53.1?
-		expect(abs(Alimento.new("Chocolate", 1, 1, 1).indice_glucemico(@datos_chocolate, @datos_glucosa) - 53.1)).to be < 10
+		expect(abs(Alimento::Alimento.new("Chocolate", 1, 1, 1).indice_glucemico(@datos_chocolate, @datos_glucosa) - 53.1)).to be < 10
 	end
 end
 
