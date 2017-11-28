@@ -87,7 +87,29 @@ RSpec.describe TiposAlimento do
 	end
 
 	it "Benchmark" do
+		array_ordenado = []
+		array_ordenado = @array.dup
+		for i in 2..array_ordenado.size
+			for j in 0..array_ordenado.size-i
+				if array_ordenado[j] > array_ordenado[j+1]
+					aux = array_ordenado[j]
+					array_ordenado[j] = array_ordenado[j+1]
+					array_ordenado[j+1] = aux
+				end
+			end
+		end
 		
+		array_ordenado = []
+		lista = List.new
+		@array.each do |i|
+			lista.push_back(i)
+		end
+		lista = lista.sort
+		lista.each do |i|
+			array_ordenado.push(i)
+		end
+			
+		array_ordenado = []
 		array_ordenado = @array.sort
 	end
 
