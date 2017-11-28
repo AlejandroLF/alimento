@@ -2,6 +2,8 @@ require "bundler/setup"
 require "Alimento"
 require "Alimento/List"
 require "Alimento/TiposAlimento"
+require 'coveralls'
+Coveralls.wear!
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
