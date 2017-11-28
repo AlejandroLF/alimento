@@ -86,4 +86,9 @@ RSpec.describe TiposAlimento do
 		expect(@manzana).to respond_to('valor_energetico')
 	end
 
+	it "Benchmark" do
+		
+		array_ordenado = @array.sort
+	end
+
 end
