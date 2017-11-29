@@ -1,4 +1,4 @@
-# Práctica de Laboratorio #9. Programación Funcional. Funciones de orden superior. INDIVIDUAL. PUNTUABLE
+# Práctica de Laboratorio #10. Programación Funcional. Benchmarks. INDIVIDUAL. PUNTUABLE
 - Por Alejandro León Fernández
 
 ## Alimento
