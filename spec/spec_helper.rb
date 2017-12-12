@@ -2,6 +2,7 @@ require "bundler/setup"
 require "Alimento"
 require "Alimento/List"
 require "Alimento/TiposAlimento"
+require "Alimento/PlatoHarvard"
 require 'coveralls'
 Coveralls.wear!
 
