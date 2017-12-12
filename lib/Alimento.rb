@@ -28,7 +28,7 @@ module Alimento
 		
 		# Imprime el alimento con formato para una tabla
 		def to_tabla
-			"#{@nombre}#{' ' * (15-@nombre.size)}     #{@proteinas}         #{@glucidos}         #{@lipidos}      #{valor_energetico.round(1)}"
+			"#{@nombre}#{' ' * (15-@nombre.size)}     #{@proteinas.round(1)}         #{@glucidos.round(1)}         #{@lipidos.round(1)}      #{valor_energetico.round(2)}"
 		end
 
 		# Calcula el valor energético del alimento

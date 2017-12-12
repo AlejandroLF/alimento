@@ -46,40 +46,55 @@ class PlatoHarvard
 		  output << "#{ingredient.to_tabla}\n"
 		end
 		
-		output << "Valor energético total:\t\t\t\t     #{@valor_energetico}\n"
+		output << "Valor energético total:\t\t\t\t     #{@valor_energetico.round(2)}\n"
 
 		output
 	end
   
-	def ingredient(name, options = {})
+	def ingredient(name, options = {}, multiplier)
 		ingredient = @alimentos.find{ |i| i.nombre == name }
 		if(!ingredient.nil?)
-		#	ingredient << " (#{options[:porcion]})" if options[:porcion]
-		#	ingredient << " (#{options[:gramos]})" if options[:gramos]
-		#	ingredient << " (#{options[:litros]})" if options[:litros]
-			@valor_energetico += ingredient.valor_energetico.round(1)
+			ingredient.proteinas *= multiplier
+			ingredient.glucidos *= multiplier
+			ingredient.lipidos *= multiplier
+			@valor_energetico += ingredient.valor_energetico
 			@ingredients << ingredient
 		end
 	end
 
 	def vegetal(name, options = {})
-		ingredient(name, options)
+		if(options[:porciones])
+			multiplier = options[:porciones] / 2
+		end
+		ingredient(name, options, multiplier)
 	end
 	
 	def fruta(name, options = {})
-		ingredient(name, options)
+		if(options[:gramos])
+			multiplier = options[:gramos] / 50
+		end
+		ingredient(name, options, multiplier)
 	end
 	
 	def cereal(name, options = {})
-		ingredient(name, options)
+		if(options[:tazas])
+			multiplier = options[:tazas] * 2
+		end
+		ingredient(name, options, multiplier)
 	end
 	
 	def proteina(name, options = {})
-		ingredient(name, options)
+		if(options[:cantidad])
+			multiplier = options[:cantidad] * 3
+		end
+		ingredient(name, options, multiplier)
 	end
 	
 	def aceite(name, options = {})
-		ingredient(name, options)
+		if(options[:cucharadas])
+			multiplier = options[:cucharadas] / 2
+		end
+		ingredient(name, options, multiplier)
 	end
 	
 end
