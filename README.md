@@ -1,4 +1,4 @@
-# Práctica de Laboratorio #10. Programación Funcional. Benchmarks. INDIVIDUAL. PUNTUABLE
+# Práctica de Laboratorio #11. Lenguajes de Dominio Específico (DSL - Domain Specific Languages).
 - Por Alejandro León Fernández
 
 ## Alimento
