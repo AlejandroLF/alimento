@@ -10,14 +10,14 @@ RSpec.describe PlatoHarvard do
 	end
 	
 	it "funciona bien" do
-		lo_que_sobra_de_la_semana = PlatoHarvard.new("Lo que sobra de la semana") do 
+		pollo_a_la_manzana_con_arroz = PlatoHarvard.new("Pollo a la manzana con arroz") do 
 			vegetal "Tomate",	:porciones => 2
 			fruta "Manzana",	:gramos => 100
 			cereal "Arroz",		:tazas => 0.5
 			proteina "Pollo",	:cantidad => 0.5
-			aceite "Aceite de oliva",	:cucharadas => 5
+			aceite "Aceite de oliva",	:cucharadas => 2
 		end
-		puts lo_que_sobra_de_la_semana
+		puts pollo_a_la_manzana_con_arroz
 	end
 
 end
